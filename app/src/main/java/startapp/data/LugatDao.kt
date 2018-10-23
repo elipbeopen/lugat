@@ -9,7 +9,6 @@ import android.arch.persistence.room.Insert
 import android.arch.persistence.room.OnConflictStrategy.REPLACE
 import android.arch.persistence.room.Query
 
-
 @Dao
 interface LugatDao {
 
@@ -21,5 +20,4 @@ interface LugatDao {
 
     @Query("DELETE FROM `lugatData`")
     fun deleteAll()
-
 }
