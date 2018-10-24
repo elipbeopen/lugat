@@ -13,9 +13,9 @@ import android.arch.persistence.room.Query
 interface LugatDao {
 
     @Query("SELECT * FROM `dictionary`")
-    fun getAll(): List<LugatDbMobel>
+    fun getAll(): List<LugatDbModel>
 
     @Insert(onConflict = REPLACE)
-    fun insert(lugatData: MutableList<LugatDbMobel>)
+    fun insert(lugatData: MutableList<LugatDbModel>)
 
 }

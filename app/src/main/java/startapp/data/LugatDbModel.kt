@@ -9,7 +9,7 @@ import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 
 @Entity(tableName = "dictionary")
-data class LugatDbMobel(
+data class LugatDbModel(
     @PrimaryKey(autoGenerate = true) var id: Int?,
     @ColumnInfo(name = "w") var word: String,
     @ColumnInfo(name = "w_r") var word_roman: String,
