@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Ogabek on 10/24/18 10:54 PM
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/colorPrimary" />
+
+    <item>
+        <bitmap android:src="@drawable/ic_launcher_background"
+            android:gravity="center" />
+
+    </item>
+
+</layer-list>
