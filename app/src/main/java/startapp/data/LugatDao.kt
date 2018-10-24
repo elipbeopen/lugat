@@ -12,12 +12,10 @@ import android.arch.persistence.room.Query
 @Dao
 interface LugatDao {
 
-    @Query("SELECT * FROM `lugatData`")
-    fun getAll(): List<LugatData>
+    @Query("SELECT * FROM `dictionary`")
+    fun getAll(): List<LugatDbMobel>
 
     @Insert(onConflict = REPLACE)
-    fun insert(lugatData: LugatData)
+    fun insert(lugatData: MutableList<LugatDbMobel>)
 
-    @Query("DELETE FROM `lugatData`")
-    fun deleteAll()
 }

@@ -7,5 +7,5 @@ package startapp.data
 import android.arch.persistence.room.Database
 import android.arch.persistence.room.RoomDatabase
 
-@Database(entities = arrayOf(LugatData::class), version = 1)
+@Database(entities = arrayOf(LugatDbMobel::class), version = 1)
     abstract class LugatDatabase : RoomDatabase()
