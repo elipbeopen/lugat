@@ -16,6 +16,6 @@ interface LugatDao {
     fun getAll(): List<LugatDbModel>
 
     @Insert(onConflict = REPLACE)
-    fun insert(lugatData: MutableList<LugatDbModel>)
+    fun insert(lugatData: List<LugatDbModel>)
 
 }
