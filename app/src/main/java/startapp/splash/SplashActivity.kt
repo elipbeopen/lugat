@@ -13,17 +13,15 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import startapp.lugat.MainActivity
 
-class SplashActivity: AppCompatActivity(), SplashView {
+class SplashActivity: AppCompatActivity(), SplashActivityContract.MvpView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val presenter = SplashPresenter(this)
+        val presenter = SplashActivityPresenter(this)
+        presenter.start()
     }
-
-    override fun goToMainActivity() {
+    override fun goToMainAcivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
     }
-
-
 }
