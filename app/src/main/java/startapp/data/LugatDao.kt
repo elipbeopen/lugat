@@ -11,17 +11,13 @@ import android.arch.persistence.room.Query
 
 @Dao
 interface LugatDao {
-    //Here I'm getting DbModel for dictionary to get translation of given a word written with korean letters
-    @Query("SELECT * FROM `dictionary` WHERE `w` = :word")
-    fun getTranslationForHangul(word: String): LugatDbModel
+    //Here I'm getting DbModel for dictionary to get translation of a id
+    @Query("SELECT * FROM `dictionary` WHERE `id` = :id")
+    fun getTranslationById(id: Int): LugatDbModel
 
     //Here I'm searching given word, this query may return several results
     @Query("SELECT * FROM `dictionary` WHERE `w` LIKE :word")
     fun getSuggestionsForHangul(word: String): List<LugatDbModel>
-
-    //I'm doing here the same thing as above, but this time I'm translating the korean word written with english letters
-    @Query("SELECT * FROM `dictionary` WHERE `w_r` = :word_roman")
-    fun getTranslationForRoman(word_roman: String): LugatDbModel
 
     //The same thing here with English letters
     @Query("SELECT * FROM `dictionary` WHERE `w_r` LIKE :word_roman")
