@@ -2,7 +2,7 @@
  * Created by Ogabek on 10/22/18 10:53 PM
  */
 
-package startapp.data
+package startapp.lugat.data
 
 import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity
