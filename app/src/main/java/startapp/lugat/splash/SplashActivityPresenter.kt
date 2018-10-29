@@ -1,4 +1,4 @@
-package startapp.splash
+package startapp.lugat.splash
 
 class SplashActivityPresenter(_view: SplashActivityContract.MvpView): SplashActivityContract.MvpPresenter{
     val model = SplashActivityModel()

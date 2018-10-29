@@ -13,7 +13,7 @@
         tools:ignore="GoogleAppIndexingWarning"
         android:fullBackupContent="true">
         <activity
-            android:name="startapp.splash.SplashActivity"
+            android:name="startapp.lugat.splash.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -23,7 +23,7 @@
         </activity>
 
         <activity
-            android:name="startapp.lugat.MainActivity"
+            android:name="startapp.lugat.dictionary.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 

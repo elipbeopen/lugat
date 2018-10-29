@@ -1,4 +1,4 @@
-package startapp.splash
+package startapp.lugat.splash
 
 interface SplashActivityContract{
     interface MvpModel{
