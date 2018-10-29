@@ -17,15 +17,15 @@ interface LugatDao {
 
     //Here I'm searching given word, this query may return several results
     @Query("SELECT * FROM `dictionary` WHERE `w` LIKE :word")
-    fun getSuggestionsForHangul(word: String): LugatDbModel
+    fun getSuggestionsForHangul(word: String): List<LugatDbModel>
 
     //I'm doing here the same thing as above, but this time I'm translating the korean word written with english letters
     @Query("SELECT * FROM `dictionary` WHERE `w_r` = :word_roman")
     fun getTranslationForRoman(word_roman: String): LugatDbModel
 
     //The same thing here with English letters
-    @Query("SELECT * FROM `dictionary` WHERE `w` LIKE :word_roman")
-    fun getSuggestionsForRoman(word_roman: String)
+    @Query("SELECT * FROM `dictionary` WHERE `w_r` LIKE :word_roman")
+    fun getSuggestionsForRoman(word_roman: String): List<LugatDbModel>
 
     //Here I'm getting all the rows from the db, and returning List of them
     @Query("SELECT * FROM `dictionary`")
