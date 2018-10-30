@@ -16,11 +16,11 @@ interface LugatDao {
     fun getTranslationById(id: Int): LugatDbModel
 
     //Here I'm searching given word, this query may return several results
-    @Query("SELECT * FROM `dictionary` WHERE `w` LIKE :word")
+    @Query("SELECT * FROM `dictionary` WHERE `word` LIKE :word")
     fun getSuggestionsForHangul(word: String): List<LugatDbModel>
 
     //The same thing here with English letters
-    @Query("SELECT * FROM `dictionary` WHERE `w_r` LIKE :word_roman")
+    @Query("SELECT * FROM `dictionary` WHERE `word_roman` LIKE :word_roman")
     fun getSuggestionsForRoman(word_roman: String): List<LugatDbModel>
 
     //Here I'm getting all the rows from the db, and returning List of them

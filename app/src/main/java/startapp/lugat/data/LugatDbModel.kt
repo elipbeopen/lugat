@@ -11,9 +11,9 @@ import android.arch.persistence.room.PrimaryKey
 @Entity(tableName = "dictionary")
 data class LugatDbModel(
     @PrimaryKey(autoGenerate = true) var id: Int?,
-    @ColumnInfo(name = "w") var word: String,
-    @ColumnInfo(name = "w_r") var word_roman: String,
-    @ColumnInfo(name = "tr") var translation: String
+    @ColumnInfo(name = "word") var word: String,
+    @ColumnInfo(name = "word_roman") var word_roman: String,
+    @ColumnInfo(name = "translation") var translation: String
 ) {
     constructor(): this(null, "", "", "")
 }
